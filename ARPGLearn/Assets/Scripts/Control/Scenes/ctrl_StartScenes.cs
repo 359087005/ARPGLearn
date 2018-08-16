@@ -9,7 +9,7 @@ using kernal;
 /// </summary>
 namespace Control
 {
-    public class ctrl_StartScenes : MonoBehaviour
+    public class ctrl_StartScenes : BaseControl
     {
         public static ctrl_StartScenes _Instance = null;
         void Awake()
@@ -52,8 +52,7 @@ namespace Control
             FadeInAndOut._Instance.SetScreenToAppear();
             yield return new WaitForSeconds(1.2f);
             //加载下一场景
-            GlobalParamgr.NextScenesName = CommonData.SCENES_LOGINSCENES;
-            SceneManager.LoadScene(CommonData.SCENES_LOADINGSCENES);
+            base.EnterNextScenes(CommonData.SCENES_LOGINSCENES);
         }
     }
 }

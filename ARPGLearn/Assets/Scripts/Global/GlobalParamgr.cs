@@ -1,9 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public static class GlobalParamgr 
+namespace Global
 {
-    public static string NextScenesName;
+    public static class GlobalParamgr
+    {
+        public static string NextScenesName;
 
-    public static string PlayerNmae = "";
+        public static string PlayerNmae = "";
+
+        public static PlayerType playerType = PlayerType.SwordHero;
+    }
+
+
 }
+

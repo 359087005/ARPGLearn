@@ -27,5 +27,15 @@ namespace Global
         public const string AUDIO_STARTSCENES = "StartScenes";
         #endregion
     }
+
+    /// <summary>
+    /// 玩家类型
+    /// </summary>
+    public enum PlayerType
+    {
+        SwordHero,
+        MaigcHero,
+        Other
+    }
 }
 

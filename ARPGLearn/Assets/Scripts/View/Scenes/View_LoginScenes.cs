@@ -16,6 +16,11 @@ namespace View
         public GameObject _UIMagicInfo;
 
         public InputField _UserName;
+
+        private void Start()
+        {
+            GlobalParamgr.playerType = PlayerType.SwordHero;
+        }
         public void ChangeToSword()
         {
             _SwordHero.SetActive(true);
@@ -23,6 +28,8 @@ namespace View
 
             _UISwordInfo.SetActive(true);
             _UIMagicInfo.SetActive(false);
+
+            GlobalParamgr.playerType = PlayerType.SwordHero;
         }
 
         public void ChangeToMagic()
@@ -32,6 +39,8 @@ namespace View
 
             _UISwordInfo.SetActive(false);
             _UIMagicInfo.SetActive(true);
+
+            GlobalParamgr.playerType = PlayerType.MaigcHero;
         }
 
         /// <summary>
