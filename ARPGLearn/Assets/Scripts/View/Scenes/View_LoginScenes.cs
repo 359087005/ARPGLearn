@@ -23,6 +23,7 @@ namespace View
         }
         public void ChangeToSword()
         {
+            Ctrl_LoginScenes._Instance.PlayAudioEffectBySword();
             _SwordHero.SetActive(true);
             _MagicHero.SetActive(false);
 
@@ -34,6 +35,7 @@ namespace View
 
         public void ChangeToMagic()
         {
+            Ctrl_LoginScenes._Instance.PlayAudioEffectBySword();
             _SwordHero.SetActive(false);
             _MagicHero.SetActive(true);
 

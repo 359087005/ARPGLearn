@@ -13,9 +13,26 @@ namespace Control
     {
         public static Ctrl_LoginScenes _Instance;
 
+        public AudioClip _ACBackGroundMusic;
         void Awake()
         {
             _Instance = this;
+        }
+        void Start()
+        {
+            AudioManager.SetAudioBackgroundVolumns(0.5f);
+            AudioManager.SetAudioEffectVolumns(1f);
+
+            AudioManager.PlayBackground(_ACBackGroundMusic);
+        }
+
+        public void PlayAudioEffectBySword()
+        {
+            AudioManager.PlayAudioEffectA("1_LightRoar_SwordHero");
+        }
+        public void PlayAudioEffectByMaig()
+        {
+            AudioManager.PlayAudioEffectB("2_FireBallEffect_MagicHero");
         }
 
         public void EnterNextScenes()
